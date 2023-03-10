@@ -64,6 +64,11 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     ),
                     ElevatedButton(
                       onPressed: () {
+                        if (_controller.hasClients) {
+                          _controller.nextPage(
+                              duration: const Duration(milliseconds: 400),
+                              curve: Curves.easeInOut);
+                        }
                         if (currentIndex == 2) {
                           Navigator.push(
                             context,
@@ -71,8 +76,6 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                               builder: (context) => const LoginView(),
                             ),
                           );
-                        } else {
-                          //currentIndex++;
                         }
                       },
                       style: ElevatedButton.styleFrom(
