@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scheduller_mobile/utils/color_pallete.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
+import 'package:scheduller_mobile/views/home_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -101,7 +102,14 @@ class _LoginViewState extends State<LoginView> {
                       height: 80,
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomeView(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         fixedSize: const Size(350, 50),
                         backgroundColor: ColorPallete.primary,
