@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scheduller_mobile/utils/color_pallete.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
+import 'package:scheduller_mobile/views/delivery_view.dart';
+import 'package:scheduller_mobile/views/periodical_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -50,7 +52,14 @@ class HomeView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DeliveryView(),
+                        ),
+                      );
+                    },
                     child: Column(children: [
                       Container(
                         height: 50,
@@ -81,7 +90,14 @@ class HomeView extends StatelessWidget {
                     width: 25,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PeriodicalServiceView(),
+                        ),
+                      );
+                    },
                     child: Column(children: [
                       Container(
                         height: 50,
