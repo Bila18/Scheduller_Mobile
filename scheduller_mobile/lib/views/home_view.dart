@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scheduller_mobile/utils/color_pallete.dart';
+import 'package:scheduller_mobile/utils/reusable_widget.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
-import 'package:scheduller_mobile/views/delivery_view.dart';
-import 'package:scheduller_mobile/views/periodical_view.dart';
+import 'package:scheduller_mobile/views/menu/delivery_view.dart';
+import 'package:scheduller_mobile/views/menu/eform_view.dart';
+import 'package:scheduller_mobile/views/menu/emilado_view.dart';
+import 'package:scheduller_mobile/views/menu/factory_campaign_view.dart';
+import 'package:scheduller_mobile/views/menu/info_view.dart';
+import 'package:scheduller_mobile/views/menu/main_tech_view.dart';
+import 'package:scheduller_mobile/views/menu/periodical_view.dart';
+import 'package:scheduller_mobile/views/menu/sop_view.dart';
+import 'package:scheduller_mobile/views/menu/standard_warranty_view.dart';
+import 'package:scheduller_mobile/views/menu/wataq_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -19,7 +28,10 @@ class HomeView extends StatelessWidget {
           Padding(
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  popUpExit(context, 'assets/logout.png',
+                      'Apakah anda yakin ingin keluar?');
+                },
                 icon: const Icon(
                   Icons.account_circle_outlined,
                   size: 40,
@@ -30,7 +42,8 @@ class HomeView extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(30),
+          padding:
+              const EdgeInsets.only(top: 30, bottom: 30, left: 30, right: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -77,7 +90,7 @@ class HomeView extends StatelessWidget {
                         height: 5,
                       ),
                       SizedBox(
-                        width: 60,
+                        width: 65,
                         child: Text(
                           'Delivery',
                           textAlign: TextAlign.center,
@@ -87,7 +100,7 @@ class HomeView extends StatelessWidget {
                     ]),
                   ),
                   const SizedBox(
-                    width: 25,
+                    width: 15,
                   ),
                   InkWell(
                     onTap: () {
@@ -115,7 +128,7 @@ class HomeView extends StatelessWidget {
                         height: 5,
                       ),
                       SizedBox(
-                        width: 60,
+                        width: 65,
                         child: Text(
                           'Periodical Service',
                           textAlign: TextAlign.center,
@@ -125,9 +138,17 @@ class HomeView extends StatelessWidget {
                     ]),
                   ),
                   const SizedBox(
-                    width: 25,
+                    width: 15,
                   ),
                   InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const StandardWarrantyView(),
+                        ),
+                      );
+                    },
                     child: Column(children: [
                       Container(
                         height: 50,
@@ -145,7 +166,7 @@ class HomeView extends StatelessWidget {
                         height: 5,
                       ),
                       SizedBox(
-                        width: 60,
+                        width: 65,
                         child: Text(
                           'Standard Warranty',
                           textAlign: TextAlign.center,
@@ -155,33 +176,43 @@ class HomeView extends StatelessWidget {
                     ]),
                   ),
                   const SizedBox(
-                    width: 25,
+                    width: 15,
                   ),
-                  Column(children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ColorPallete.primary),
-                      child: const Center(
-                        child: FaIcon(
-                          FontAwesomeIcons.book,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SopView(),
+                        ),
+                      );
+                    },
+                    child: Column(children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: ColorPallete.primary),
+                        child: const Center(
+                          child: FaIcon(
+                            FontAwesomeIcons.book,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    SizedBox(
-                      width: 60,
-                      child: Text(
-                        'SOP',
-                        textAlign: TextAlign.center,
-                        style: TypographyRoboto.regularNormal,
+                      const SizedBox(
+                        height: 5,
                       ),
-                    ),
-                  ]),
+                      SizedBox(
+                        width: 65,
+                        child: Text(
+                          'SOP',
+                          textAlign: TextAlign.center,
+                          style: TypographyRoboto.regularNormal,
+                        ),
+                      ),
+                    ]),
+                  ),
                 ],
               ),
               const SizedBox(
@@ -190,115 +221,155 @@ class HomeView extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ColorPallete.primary),
-                      child: const Center(
-                        child: FaIcon(
-                          FontAwesomeIcons.warehouse,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const FactoryCampaignView(),
+                        ),
+                      );
+                    },
+                    child: Column(children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: ColorPallete.primary),
+                        child: const Center(
+                          child: FaIcon(
+                            FontAwesomeIcons.warehouse,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    SizedBox(
-                      width: 60,
-                      child: Text(
-                        'Factory Campaign',
-                        textAlign: TextAlign.center,
-                        style: TypographyRoboto.regularNormal,
+                      const SizedBox(
+                        height: 5,
                       ),
-                    ),
-                  ]),
-                  const SizedBox(
-                    width: 25,
+                      SizedBox(
+                        width: 65,
+                        child: Text(
+                          'Factory Campaign',
+                          textAlign: TextAlign.center,
+                          style: TypographyRoboto.regularNormal,
+                        ),
+                      ),
+                    ]),
                   ),
-                  Column(children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ColorPallete.primary),
-                      child: const Center(
-                        child: FaIcon(
-                          FontAwesomeIcons.bookOpenReader,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    SizedBox(
-                      width: 60,
-                      child: Text(
-                        'WATAQ',
-                        textAlign: TextAlign.center,
-                        style: TypographyRoboto.regularNormal,
-                      ),
-                    ),
-                  ]),
                   const SizedBox(
-                    width: 25,
+                    width: 15,
                   ),
-                  Column(children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ColorPallete.primary),
-                      child: const Center(
-                        child: FaIcon(
-                          FontAwesomeIcons.image,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const WataqView(),
+                        ),
+                      );
+                    },
+                    child: Column(children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: ColorPallete.primary),
+                        child: const Center(
+                          child: FaIcon(
+                            FontAwesomeIcons.bookOpenReader,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    SizedBox(
-                      width: 60,
-                      child: Text(
-                        'EMILADO',
-                        textAlign: TextAlign.center,
-                        style: TypographyRoboto.regularNormal,
+                      const SizedBox(
+                        height: 5,
                       ),
-                    ),
-                  ]),
+                      SizedBox(
+                        width: 65,
+                        child: Text(
+                          'WATAQ',
+                          textAlign: TextAlign.center,
+                          style: TypographyRoboto.regularNormal,
+                        ),
+                      ),
+                    ]),
+                  ),
                   const SizedBox(
-                    width: 25,
+                    width: 15,
                   ),
-                  Column(children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ColorPallete.primary),
-                      child: const Center(
-                        child: FaIcon(
-                          FontAwesomeIcons.fileInvoice,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const EmiladoView(),
+                        ),
+                      );
+                    },
+                    child: Column(children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: ColorPallete.primary),
+                        child: const Center(
+                          child: FaIcon(
+                            FontAwesomeIcons.image,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    SizedBox(
-                      width: 60,
-                      child: Text(
-                        'E-Form',
-                        textAlign: TextAlign.center,
-                        style: TypographyRoboto.regularNormal,
+                      const SizedBox(
+                        height: 5,
                       ),
-                    ),
-                  ]),
+                      SizedBox(
+                        width: 65,
+                        child: Text(
+                          'EMILADO',
+                          textAlign: TextAlign.center,
+                          style: TypographyRoboto.regularNormal,
+                        ),
+                      ),
+                    ]),
+                  ),
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const EFormView(),
+                        ),
+                      );
+                    },
+                    child: Column(children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: ColorPallete.primary),
+                        child: const Center(
+                          child: FaIcon(
+                            FontAwesomeIcons.fileInvoice,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      SizedBox(
+                        width: 65,
+                        child: Text(
+                          'E-Form',
+                          textAlign: TextAlign.center,
+                          style: TypographyRoboto.regularNormal,
+                        ),
+                      ),
+                    ]),
+                  ),
                 ],
               ),
               const SizedBox(
@@ -307,59 +378,79 @@ class HomeView extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ColorPallete.primary),
-                      child: const Center(
-                        child: FaIcon(
-                          FontAwesomeIcons.sliders,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MainTechView(),
+                        ),
+                      );
+                    },
+                    child: Column(children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: ColorPallete.primary),
+                        child: const Center(
+                          child: FaIcon(
+                            FontAwesomeIcons.sliders,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    SizedBox(
-                      width: 60,
-                      child: Text(
-                        'Main Tech',
-                        textAlign: TextAlign.center,
-                        style: TypographyRoboto.regularNormal,
+                      const SizedBox(
+                        height: 5,
                       ),
-                    ),
-                  ]),
-                  const SizedBox(
-                    width: 25,
+                      SizedBox(
+                        width: 65,
+                        child: Text(
+                          'Main Tech',
+                          textAlign: TextAlign.center,
+                          style: TypographyRoboto.regularNormal,
+                        ),
+                      ),
+                    ]),
                   ),
-                  Column(children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ColorPallete.primary),
-                      child: const Center(
-                        child: FaIcon(
-                          FontAwesomeIcons.circleInfo,
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const InfoView(),
+                        ),
+                      );
+                    },
+                    child: Column(children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: ColorPallete.primary),
+                        child: const Center(
+                          child: FaIcon(
+                            FontAwesomeIcons.circleInfo,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    SizedBox(
-                      width: 60,
-                      child: Text(
-                        'Info',
-                        textAlign: TextAlign.center,
-                        style: TypographyRoboto.regularNormal,
+                      const SizedBox(
+                        height: 5,
                       ),
-                    ),
-                  ]),
+                      SizedBox(
+                        width: 65,
+                        child: Text(
+                          'Info',
+                          textAlign: TextAlign.center,
+                          style: TypographyRoboto.regularNormal,
+                        ),
+                      ),
+                    ]),
+                  ),
                 ],
               ),
               const SizedBox(

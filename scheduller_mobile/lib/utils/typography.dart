@@ -47,6 +47,11 @@ class TypographyRoboto {
     fontWeight: FontWeight.w500,
     fontSize: 24,
   );
+  static TextStyle mediumHeading4 = const TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w500,
+    fontSize: 20,
+  );
   static TextStyle mediumLarge = const TextStyle(
     fontFamily: 'Roboto',
     fontWeight: FontWeight.w500,

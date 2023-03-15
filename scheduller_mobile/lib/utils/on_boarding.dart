@@ -124,7 +124,7 @@ final List<Widget> onBoarding = [
         style: TypographyRoboto.regularLarge,
       ),
       const SizedBox(
-        height: 130,
+        height: 115,
       ),
     ],
   ),
@@ -186,7 +186,7 @@ final List<Widget> onBoarding = [
         style: TypographyRoboto.regularLarge,
       ),
       const SizedBox(
-        height: 120,
+        height: 80,
       ),
     ],
   ),
