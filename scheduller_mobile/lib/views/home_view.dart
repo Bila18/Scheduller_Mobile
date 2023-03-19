@@ -43,7 +43,7 @@ class HomeView extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding:
-              const EdgeInsets.only(top: 30, bottom: 30, left: 30, right: 10),
+              const EdgeInsets.only(top: 30, bottom: 30, left: 20, right: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -63,6 +63,7 @@ class HomeView extends StatelessWidget {
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InkWell(
                     onTap: () {
@@ -99,9 +100,9 @@ class HomeView extends StatelessWidget {
                       ),
                     ]),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  // const SizedBox(
+                  //   width: 15,
+                  // ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -137,9 +138,9 @@ class HomeView extends StatelessWidget {
                       ),
                     ]),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  // const SizedBox(
+                  //   width: 15,
+                  // ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -175,9 +176,9 @@ class HomeView extends StatelessWidget {
                       ),
                     ]),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  // const SizedBox(
+                  //   width: 15,
+                  // ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -220,6 +221,7 @@ class HomeView extends StatelessWidget {
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InkWell(
                     onTap: () {
@@ -256,9 +258,6 @@ class HomeView extends StatelessWidget {
                       ),
                     ]),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -294,9 +293,6 @@ class HomeView extends StatelessWidget {
                       ),
                     ]),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -331,9 +327,6 @@ class HomeView extends StatelessWidget {
                         ),
                       ),
                     ]),
-                  ),
-                  const SizedBox(
-                    width: 15,
                   ),
                   InkWell(
                     onTap: () {
@@ -378,6 +371,9 @@ class HomeView extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(
+                    width: 12,
+                  ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -414,7 +410,7 @@ class HomeView extends StatelessWidget {
                     ]),
                   ),
                   const SizedBox(
-                    width: 15,
+                    width: 27,
                   ),
                   InkWell(
                     onTap: () {

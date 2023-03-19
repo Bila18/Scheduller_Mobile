@@ -6,10 +6,15 @@ final List<Widget> onBoarding = [
   Column(
     children: [
       const SizedBox(
-        height: 100,
+        height: 70,
       ),
-      Image.asset(
-        'assets/on_boarding/bomag.png',
+      SizedBox(
+        height: 220,
+        width: double.infinity,
+        child: Image.asset(
+          'assets/on_boarding/bomag.png',
+          fit: BoxFit.contain,
+        ),
       ),
       const SizedBox(
         height: 60,
@@ -60,19 +65,26 @@ final List<Widget> onBoarding = [
         textAlign: TextAlign.center,
         style: TypographyRoboto.regularLarge,
       ),
-      const SizedBox(
-        height: 110,
-      ),
+      // const SizedBox(
+      //   height: 70,
+      // ),
     ],
   ),
   Column(
     children: [
-      // const SizedBox(
-      //   height: 10,
-      // ),
-      Image.asset(
-        'assets/on_boarding/scania.png',
-        scale: 2,
+      const SizedBox(
+        height: 20,
+      ),
+      Container(
+        margin: EdgeInsets.all(10),
+        height: 260,
+        width: double.infinity,
+        child: Image.asset(
+          'assets/on_boarding/scania.png',
+          height: 240,
+          width: double.infinity,
+          fit: BoxFit.cover,
+        ),
       ),
       const SizedBox(
         height: 50,
@@ -123,18 +135,23 @@ final List<Widget> onBoarding = [
         textAlign: TextAlign.center,
         style: TypographyRoboto.regularLarge,
       ),
-      const SizedBox(
-        height: 115,
-      ),
+      // const SizedBox(
+      //   height: 60,
+      // ),
     ],
   ),
   Column(
     children: [
       const SizedBox(
-        height: 100,
+        height: 65,
       ),
-      Image.asset(
-        'assets/on_boarding/komatsu.jpeg',
+      SizedBox(
+        height: 220,
+        width: double.infinity,
+        child: Image.asset(
+          'assets/on_boarding/komatsu.jpeg',
+          fit: BoxFit.contain,
+        ),
       ),
       const SizedBox(
         height: 60,
@@ -185,9 +202,9 @@ final List<Widget> onBoarding = [
         textAlign: TextAlign.center,
         style: TypographyRoboto.regularLarge,
       ),
-      const SizedBox(
-        height: 80,
-      ),
+      // const SizedBox(
+      //   height: 80,
+      // ),
     ],
   ),
 ];
