@@ -32,7 +32,11 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.only(
+          left: 30,
+          right: 30,
+          bottom: 30,
+        ),
         child: PageView.builder(
           controller: _controller,
           onPageChanged: (index) {
@@ -43,6 +47,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           },
           itemBuilder: (context, index) {
             return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 onBoarding[index],
                 Row(
