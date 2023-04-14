@@ -1,7 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:scheduller_mobile/utils/color_pallete.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
-import 'package:scheduller_mobile/views/login_view.dart';
 
 void popUpExit(BuildContext context, String img, String title) async {
   showDialog(
@@ -52,12 +52,9 @@ void popUpExit(BuildContext context, String img, String title) async {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LoginView(),
-                      ),
-                    );
+                    FirebaseAuth.instance.signOut().then((value) {
+                      Navigator.pushNamed(context, "/login");
+                    });
                   },
                   child: Text('Ya', style: TypographyRoboto.next),
                 ),

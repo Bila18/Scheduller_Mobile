@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:scheduller_mobile/views/main_screen.dart';
 import 'package:scheduller_mobile/views/on_boarding_view.dart';
 import 'views/home_view.dart';
 import 'views/login_view.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -16,7 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Scheduller Mobile',
       routes: {
-        '/': (context) => const OnBoardingView(),
+        '/': (context) => const MainScreen(),
+        '/onBoarding': (context) => const OnBoardingView(),
         '/login': (context) => const LoginView(),
         '/home': (context) => const HomeView(),
       },
