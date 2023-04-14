@@ -47,6 +47,11 @@ class TypographyRoboto {
     fontWeight: FontWeight.w500,
     fontSize: 24,
   );
+  static TextStyle mediumHeading4 = const TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w500,
+    fontSize: 20,
+  );
   static TextStyle mediumLarge = const TextStyle(
     fontFamily: 'Roboto',
     fontWeight: FontWeight.w500,
@@ -98,8 +103,14 @@ class TypographyRoboto {
       fontSize: 16,
       color: Color(0xFFFFFFFF));
   static TextStyle skip = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w700,
+    fontSize: 16,
+    color: ColorPallete.primary,
+  );
+  static TextStyle appBar = const TextStyle(
       fontFamily: 'Roboto',
-      fontWeight: FontWeight.w700,
-      fontSize: 16,
-      color: ColorPallete.primary);
+      fontWeight: FontWeight.w600,
+      fontSize: 24,
+      color: Colors.black);
 }
