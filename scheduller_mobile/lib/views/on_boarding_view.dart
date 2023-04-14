@@ -43,7 +43,6 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             setState(() {
               currentIndex = index;
             });
-            print(currentIndex);
           },
           itemBuilder: (context, index) {
             return Column(

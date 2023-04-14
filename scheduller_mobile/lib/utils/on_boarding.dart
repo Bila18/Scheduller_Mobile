@@ -65,9 +65,6 @@ final List<Widget> onBoarding = [
         textAlign: TextAlign.center,
         style: TypographyRoboto.regularLarge,
       ),
-      // const SizedBox(
-      //   height: 70,
-      // ),
     ],
   ),
   Column(
@@ -76,7 +73,7 @@ final List<Widget> onBoarding = [
         height: 20,
       ),
       Container(
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         height: 260,
         width: double.infinity,
         child: Image.asset(
@@ -135,9 +132,6 @@ final List<Widget> onBoarding = [
         textAlign: TextAlign.center,
         style: TypographyRoboto.regularLarge,
       ),
-      // const SizedBox(
-      //   height: 60,
-      // ),
     ],
   ),
   Column(
@@ -202,9 +196,6 @@ final List<Widget> onBoarding = [
         textAlign: TextAlign.center,
         style: TypographyRoboto.regularLarge,
       ),
-      // const SizedBox(
-      //   height: 80,
-      // ),
     ],
   ),
 ];
