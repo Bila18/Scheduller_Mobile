@@ -15,7 +15,7 @@ class _LoginViewState extends State<LoginView> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
-  bool showPassword = false;
+  bool showPassword = true;
 
   @override
   void dispose() {
@@ -158,13 +158,13 @@ class _LoginViewState extends State<LoginView> {
                           suffixIcon: IconButton(
                             onPressed: () {
                               setState(() {
-                                showPassword = showPassword;
+                                showPassword = !showPassword;
                               });
                             },
                             icon: Icon(
                               showPassword
-                                  ? Icons.visibility_outlined
-                                  : Icons.visibility_off_outlined,
+                                  ? Icons.visibility_off_outlined
+                                  : Icons.visibility_outlined,
                               color: Colors.grey,
                             ),
                           ),

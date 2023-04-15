@@ -105,13 +105,14 @@ class CardFile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
       child: Container(
-        height: 50,
+        height: 70,
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: ColorPallete.box,
         ),
         child: ListTile(
+          visualDensity: VisualDensity(vertical: 1),
           title: Text(fileName),
           onTap: () {
             Navigator.push(
