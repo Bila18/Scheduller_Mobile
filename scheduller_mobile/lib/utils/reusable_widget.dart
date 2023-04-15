@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:scheduller_mobile/utils/color_pallete.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
 
+import '../views/pdf_view.dart';
+
 void popUpExit(BuildContext context, String img, String title) async {
   showDialog(
     context: context,
@@ -87,4 +89,40 @@ Widget reusableContainer(String title) {
       ),
     ]),
   );
+}
+
+class CardFile extends StatelessWidget {
+  final String url;
+  final String fileName;
+  const CardFile(
+    this.url,
+    this.fileName, {
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
+      child: Container(
+        height: 50,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: ColorPallete.box,
+        ),
+        child: ListTile(
+          title: Text(fileName),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PdfView(url, fileName),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
 }

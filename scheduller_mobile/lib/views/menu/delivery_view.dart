@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scheduller_mobile/utils/color_pallete.dart';
+import 'package:scheduller_mobile/utils/reusable_widget.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
 
 class DeliveryView extends StatelessWidget {
@@ -26,6 +27,34 @@ class DeliveryView extends StatelessWidget {
         ),
         backgroundColor: ColorPallete.primary,
       ),
+      body: listUrl.isNotEmpty
+          ? Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView.builder(
+                itemCount: listUrl.length,
+                itemBuilder: (context, index) {
+                  return CardFile(
+                    listUrl.elementAt(index),
+                    listName.elementAt(index),
+                  );
+                },
+              ),
+            )
+          : Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/error.png',
+                  ),
+                  Text(
+                    'Maaf, belum ada file tersedia saat ini!',
+                    textAlign: TextAlign.center,
+                    style: TypographyRoboto.boldHeading3,
+                  ),
+                ],
+              ),
+            ),
     );
   }
 }

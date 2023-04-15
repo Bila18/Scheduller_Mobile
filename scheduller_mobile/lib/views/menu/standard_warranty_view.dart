@@ -4,7 +4,9 @@ import 'package:scheduller_mobile/utils/reusable_widget.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
 
 class StandardWarrantyView extends StatelessWidget {
-  const StandardWarrantyView({super.key});
+  final List listUrl;
+  final List listName;
+  const StandardWarrantyView(this.listUrl, this.listName, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,30 +27,34 @@ class StandardWarrantyView extends StatelessWidget {
         ),
         backgroundColor: ColorPallete.primary,
       ),
-      body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Text(
-              'Temukan Lebih Banyak!',
-              style: TypographyRoboto.mediumHeading1,
+      body: listUrl.isNotEmpty
+          ? Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView.builder(
+                itemCount: listUrl.length,
+                itemBuilder: (context, index) {
+                  return CardFile(
+                    listUrl.elementAt(index),
+                    listName.elementAt(index),
+                  );
+                },
+              ),
+            )
+          : Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/error.png',
+                  ),
+                  Text(
+                    'Maaf, belum ada file tersedia saat ini!',
+                    textAlign: TextAlign.center,
+                    style: TypographyRoboto.boldHeading3,
+                  ),
+                ],
+              ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            reusableContainer('Bomag'),
-            const SizedBox(height: 20),
-            reusableContainer('Komatsu'),
-            const SizedBox(height: 20),
-            reusableContainer('Scania'),
-            const SizedBox(height: 20),
-            reusableContainer('Tadano'),
-            const SizedBox(height: 20),
-            reusableContainer('UD Truck'),
-          ],
-        ),
-      )),
     );
   }
 }

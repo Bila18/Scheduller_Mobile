@@ -83,7 +83,7 @@ class _HomeViewState extends State<HomeView> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -91,6 +91,7 @@ class _HomeViewState extends State<HomeView> {
                               DeliveryView(listUrlDlvr, listNameDlv),
                         ),
                       );
+                      await delivery();
                     },
                     child: Column(children: [
                       Container(
@@ -122,13 +123,15 @@ class _HomeViewState extends State<HomeView> {
                   //   width: 15,
                   // ),
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const PeriodicalServiceView(),
+                          builder: (context) =>
+                              PeriodicalServiceView(listUrlPs, listNamePs),
                         ),
                       );
+                      await periodical();
                     },
                     child: Column(children: [
                       Container(
@@ -160,13 +163,15 @@ class _HomeViewState extends State<HomeView> {
                   //   width: 15,
                   // ),
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const StandardWarrantyView(),
+                          builder: (context) =>
+                              StandardWarrantyView(listUrlSw, listNameSw),
                         ),
                       );
+                      await standard();
                     },
                     child: Column(children: [
                       Container(
@@ -198,13 +203,15 @@ class _HomeViewState extends State<HomeView> {
                   //   width: 15,
                   // ),
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SopView(),
+                          builder: (context) =>
+                              SopView(listUrlSop, listNameSop),
                         ),
                       );
+                      await sop();
                     },
                     child: Column(children: [
                       Container(
@@ -242,13 +249,15 @@ class _HomeViewState extends State<HomeView> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const FactoryCampaignView(),
+                          builder: (context) =>
+                              FactoryCampaignView(listUrlFc, listNameFc),
                         ),
                       );
+                      await fcDc();
                     },
                     child: Column(children: [
                       Container(
@@ -277,13 +286,15 @@ class _HomeViewState extends State<HomeView> {
                     ]),
                   ),
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const WataqView(),
+                          builder: (context) =>
+                              WataqView(listUrlWtq, listNameWtq),
                         ),
                       );
+                      await wataq();
                     },
                     child: Column(children: [
                       Container(
@@ -312,13 +323,15 @@ class _HomeViewState extends State<HomeView> {
                     ]),
                   ),
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const EmiladoView(),
+                          builder: (context) =>
+                              EmiladoView(listUrlEmd, listNameEmd),
                         ),
                       );
+                      await emilado();
                     },
                     child: Column(children: [
                       Container(
@@ -347,13 +360,15 @@ class _HomeViewState extends State<HomeView> {
                     ]),
                   ),
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const EFormView(),
+                          builder: (context) =>
+                              EFormView(listUrlEf, listNameEf),
                         ),
                       );
+                      await eForm();
                     },
                     child: Column(children: [
                       Container(
@@ -393,13 +408,15 @@ class _HomeViewState extends State<HomeView> {
                     width: 12,
                   ),
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const MainTechView(),
+                          builder: (context) =>
+                              MainTechView(listUrlMt, listNameMt),
                         ),
                       );
+                      await mainTech();
                     },
                     child: Column(children: [
                       Container(
@@ -431,13 +448,14 @@ class _HomeViewState extends State<HomeView> {
                     width: 27,
                   ),
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const InfoView(),
+                          builder: (context) => InfoView(listUrlIf, listNameIf),
                         ),
                       );
+                      await info();
                     },
                     child: Column(children: [
                       Container(

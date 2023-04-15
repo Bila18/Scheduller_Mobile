@@ -111,6 +111,6 @@ class TypographyRoboto {
   static TextStyle appBar = const TextStyle(
       fontFamily: 'Roboto',
       fontWeight: FontWeight.w600,
-      fontSize: 24,
+      fontSize: 20,
       color: Colors.black);
 }
