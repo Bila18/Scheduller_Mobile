@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scheduller_mobile/utils/color_pallete.dart';
+import 'package:scheduller_mobile/utils/function.dart';
 import 'package:scheduller_mobile/utils/reusable_widget.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
 import 'package:scheduller_mobile/views/menu/delivery_view.dart';
@@ -13,12 +14,28 @@ import 'package:scheduller_mobile/views/menu/periodical_view.dart';
 import 'package:scheduller_mobile/views/menu/sop_view.dart';
 import 'package:scheduller_mobile/views/menu/standard_warranty_view.dart';
 import 'package:scheduller_mobile/views/menu/wataq_view.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
   @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  @override
   Widget build(BuildContext context) {
+    delivery();
+    periodical();
+    standard();
+    sop();
+    fcDc();
+    wataq();
+    emilado();
+    eForm();
+    mainTech();
+    info();
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -48,7 +65,7 @@ class HomeView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Hi, Nabila!',
+                'Hi, Scheduller!',
                 style: TypographyRoboto.boldHeading1,
               ),
               const SizedBox(
@@ -70,7 +87,8 @@ class HomeView extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const DeliveryView(),
+                          builder: (context) =>
+                              DeliveryView(listUrlDlvr, listNameDlv),
                         ),
                       );
                     },
@@ -251,7 +269,7 @@ class HomeView extends StatelessWidget {
                       SizedBox(
                         width: 65,
                         child: Text(
-                          'Factory Campaign',
+                          'FC & DC',
                           textAlign: TextAlign.center,
                           style: TypographyRoboto.regularNormal,
                         ),

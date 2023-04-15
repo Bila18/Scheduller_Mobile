@@ -19,7 +19,7 @@ class FactoryCampaignView extends StatelessWidget {
           },
         ),
         title: Text(
-          'Factory Campaign',
+          'FC & DC',
           style: TypographyRoboto.appBar,
         ),
         backgroundColor: ColorPallete.primary,

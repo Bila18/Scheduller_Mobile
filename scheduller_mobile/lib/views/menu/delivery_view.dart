@@ -3,7 +3,9 @@ import 'package:scheduller_mobile/utils/color_pallete.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
 
 class DeliveryView extends StatelessWidget {
-  const DeliveryView({super.key});
+  final List listUrl;
+  final List listName;
+  const DeliveryView(this.listUrl, this.listName, {super.key});
 
   @override
   Widget build(BuildContext context) {
