@@ -42,6 +42,7 @@ dependencies:
   firebase_storage: ^11.0.16
   pdfx: ^2.3.0
   internet_file: ^1.2.0
+  photo_view: ^0.14.0
 
 dev_dependencies:
   flutter_test:
@@ -83,6 +84,7 @@ flutter:
   assets:
     - assets/
     - assets/on_boarding/
+    - assets/tips_trik/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

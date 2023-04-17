@@ -112,7 +112,7 @@ class CardFile extends StatelessWidget {
           color: ColorPallete.box,
         ),
         child: ListTile(
-          visualDensity: VisualDensity(vertical: 1),
+          visualDensity: const VisualDensity(vertical: 1),
           title: Text(fileName),
           onTap: () {
             Navigator.push(
