@@ -54,14 +54,14 @@ final List<Widget> onBoarding = [
         height: 60,
       ),
       Text(
-        'Pilih Panduan Kerja',
+        'Select Work Guide',
         style: TypographyRoboto.boldHeading3,
       ),
       const SizedBox(
-        height: 46,
+        height: 56,
       ),
       Text(
-        'Temukan informasi mengenai warranty dan claim yang dapat kamu temui secara lengkap disini.',
+        'Find complete informations about warranty and claims that you can find here.',
         textAlign: TextAlign.center,
         style: TypographyRoboto.regularLarge,
       ),
@@ -121,14 +121,14 @@ final List<Widget> onBoarding = [
         height: 60,
       ),
       Text(
-        'Baca Dimana Saja',
+        'Read Anywhere',
         style: TypographyRoboto.boldHeading3,
       ),
       const SizedBox(
-        height: 46,
+        height: 56,
       ),
       Text(
-        'Sekarang semua informasi yang dibutuhkan scheduler bisa diakses dimana saja',
+        'All the informations needed by the Scheduler can be accessed anywhere.',
         textAlign: TextAlign.center,
         style: TypographyRoboto.regularLarge,
       ),
@@ -185,14 +185,14 @@ final List<Widget> onBoarding = [
         height: 60,
       ),
       Text(
-        'Pelajari Semuanya',
+        'Learn Anything',
         style: TypographyRoboto.boldHeading3,
       ),
       const SizedBox(
-        height: 46,
+        height: 60,
       ),
       Text(
-        'Dengan menggunakan aplikasi ini kamu bisa mengakses informasi mengenai warranty dan claim dengan mudah.',
+        'By using this application, you can learn about warranty and claims by accessing informations easily.',
         textAlign: TextAlign.center,
         style: TypographyRoboto.regularLarge,
       ),

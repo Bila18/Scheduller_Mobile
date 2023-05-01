@@ -62,7 +62,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                         );
                       },
                       child: Text(
-                        'Lewati',
+                        'Skip',
                         style: TypographyRoboto.skip,
                       ),
                     ),
@@ -89,7 +89,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                         ),
                       ),
                       child: Text(
-                        'Berikutnya',
+                        'Next',
                         style: TypographyRoboto.next,
                       ),
                     ),

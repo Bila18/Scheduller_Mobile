@@ -139,7 +139,7 @@ class _LoginViewState extends State<LoginView> {
                         keyboardType: TextInputType.visiblePassword,
                         textInputAction: TextInputAction.done,
                         decoration: InputDecoration(
-                          labelText: 'Kata Sandi',
+                          labelText: 'Password',
                           labelStyle: const TextStyle(
                             color: Color(0xFF878787),
                           ),
@@ -199,7 +199,7 @@ class _LoginViewState extends State<LoginView> {
                         child: Padding(
                           padding: const EdgeInsets.all(15),
                           child: Text(
-                            'Masuk',
+                            'Login',
                             style: TypographyRoboto.next,
                           ),
                         ),

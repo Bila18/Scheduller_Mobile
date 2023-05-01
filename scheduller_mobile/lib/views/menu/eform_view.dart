@@ -49,7 +49,7 @@ class EFormView extends StatelessWidget {
                     'assets/error.png',
                   ),
                   Text(
-                    'Maaf, belum ada file tersedia saat ini!',
+                    'Sorry, something worng or file not available!',
                     textAlign: TextAlign.center,
                     style: TypographyRoboto.boldHeading3,
                   ),

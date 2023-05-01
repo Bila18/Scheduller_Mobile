@@ -50,8 +50,8 @@ class _HomeViewState extends State<HomeView> {
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
                 onPressed: () {
-                  popUpExit(context, 'assets/logout.png',
-                      'Apakah anda yakin ingin keluar?');
+                  popUpExit(
+                      context, 'assets/logout.png', "Log out of your account?");
                 },
                 icon: const Icon(
                   Icons.account_circle_outlined,
@@ -69,14 +69,14 @@ class _HomeViewState extends State<HomeView> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Hi, Scheduller!',
+                'Hi, Scheduler!',
                 style: TypographyRoboto.boldHeading1,
               ),
               const SizedBox(
                 height: 5,
               ),
               Text(
-                'Apa yang ingin kamu ketahui?',
+                'What do you want to know?',
                 style: TypographyRoboto.regularMedium,
               ),
               const SizedBox(

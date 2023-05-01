@@ -43,7 +43,7 @@ void popUpExit(BuildContext context, String img, String title) async {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: Text('Tidak', style: TypographyRoboto.skip),
+                  child: Text('Cancel', style: TypographyRoboto.skip),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -58,7 +58,7 @@ void popUpExit(BuildContext context, String img, String title) async {
                       Navigator.pushNamed(context, "/login");
                     });
                   },
-                  child: Text('Ya', style: TypographyRoboto.next),
+                  child: Text('Log Out', style: TypographyRoboto.next),
                 ),
               ],
             ),
