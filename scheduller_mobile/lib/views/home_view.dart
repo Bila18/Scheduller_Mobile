@@ -3,10 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scheduller_mobile/utils/color_pallete.dart';
 import 'package:scheduller_mobile/utils/function.dart';
 import 'package:scheduller_mobile/utils/reusable_widget.dart';
-import 'package:scheduller_mobile/models/model_tips_trik.dart';
 import 'package:scheduller_mobile/utils/typography.dart';
 import 'package:scheduller_mobile/views/menu/delivery_view.dart';
-import 'package:scheduller_mobile/views/menu/detail_tips_view.dart';
 import 'package:scheduller_mobile/views/menu/eform_view.dart';
 import 'package:scheduller_mobile/views/menu/emilado_view.dart';
 import 'package:scheduller_mobile/views/menu/factory_campaign_view.dart';
@@ -16,7 +14,6 @@ import 'package:scheduller_mobile/views/menu/periodical_view.dart';
 import 'package:scheduller_mobile/views/menu/sop_view.dart';
 import 'package:scheduller_mobile/views/menu/standard_warranty_view.dart';
 import 'package:scheduller_mobile/views/menu/wataq_view.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 
 import '../widget/tips_trik.dart';
 

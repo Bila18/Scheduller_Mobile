@@ -44,7 +44,6 @@ Future delivery() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/delivery").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " Delivery");
   listUrlDlvr.clear();
   listNameDlv.clear();
   for (int i = 0; i < allFiles.length; i++) {
@@ -59,7 +58,6 @@ Future periodical() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/periodical").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " Periodical");
   listUrlPs.clear();
   listNamePs.clear();
   for (int i = 0; i < allFiles.length; i++) {
@@ -74,7 +72,6 @@ Future standard() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/standard").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " Standard");
   listUrlSw.clear();
   listNameSw.clear();
   for (int i = 0; i < allFiles.length; i++) {
@@ -89,7 +86,6 @@ Future sop() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/sop").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " Sop");
   listUrlSop.clear();
   listNameSop.clear();
   for (int i = 0; i < allFiles.length; i++) {
@@ -104,7 +100,6 @@ Future fcDc() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/fc-dc").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " FC&DC");
   listUrlFc.clear();
   listNameFc.clear();
   for (int i = 0; i < allFiles.length; i++) {
@@ -119,7 +114,6 @@ Future wataq() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/wataq").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " Wataq");
   listUrlWtq.clear();
   listNameWtq.clear();
   for (int i = 0; i < allFiles.length; i++) {
@@ -134,7 +128,6 @@ Future emilado() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/emilado").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " Emilado");
   listUrlEmd.clear();
   listNameEmd.clear();
   for (int i = 0; i < allFiles.length; i++) {
@@ -149,7 +142,6 @@ Future eForm() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/eForm").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " E-Form");
   listUrlEf.clear();
   listNameEf.clear();
   for (int i = 0; i < allFiles.length; i++) {
@@ -164,7 +156,6 @@ Future mainTech() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/main-tech").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " Main Tech");
   listUrlMt.clear();
   listNameMt.clear();
   for (int i = 0; i < allFiles.length; i++) {
@@ -179,7 +170,6 @@ Future info() async {
   FirebaseStorage storage = FirebaseStorage.instance;
   final result = await storage.ref().child("/info").listAll();
   List<Reference> allFiles = result.items;
-  print(allFiles.length.toString() + " Info");
   listUrlIf.clear();
   listNameIf.clear();
   for (int i = 0; i < allFiles.length; i++) {

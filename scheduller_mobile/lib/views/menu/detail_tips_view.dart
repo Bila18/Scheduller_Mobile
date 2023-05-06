@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:scheduller_mobile/utils/color_pallete.dart';
 import 'package:scheduller_mobile/models/model_tips_trik.dart';
 import 'package:photo_view/photo_view.dart';
 
