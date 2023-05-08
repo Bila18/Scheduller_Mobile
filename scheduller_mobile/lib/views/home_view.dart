@@ -490,76 +490,16 @@ class _HomeViewState extends State<HomeView> {
                 height: 30,
               ),
               Text(
-                'Tips & Trik',
+                'Tips & Trick',
                 style: TypographyRoboto.boldHeading1,
               ),
               const SizedBox(
                 height: 20,
               ),
-              // ListView.builder(
-              //   scrollDirection: Axis.horizontal,
-              //   shrinkWrap: true,
-              //   itemCount: image.length,
-              //   itemBuilder: (context, index) => Image.asset(
-              //     image.elementAt(index),
-              //     height: 350,
-              //   ),
-              // ),
-              // SingleChildScrollView(
-              //   scrollDirection: Axis.horizontal,
-              //   child: Row(
-              //     children: [
-              //       Image.asset(
-              //         'assets/tips_trik/hal_3.png',
-              //         height: 350,
-              //       ),
-              //       const SizedBox(
-              //         width: 20,
-              //       ),
-              //       Container(
-              //         padding: const EdgeInsets.all(10),
-              //         height: 350,
-              //         width: 225,
-              //         decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(10),
-              //             color: ColorPallete.box),
-              //         child: Text(
-              //           'No.2',
-              //           style: TypographyRoboto.boldHeading2,
-              //         ),
-              //       ),
-              //       const SizedBox(
-              //         width: 20,
-              //       ),
-              //       Container(
-              //         padding: const EdgeInsets.all(10),
-              //         height: 350,
-              //         width: 225,
-              //         decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(10),
-              //             color: ColorPallete.box),
-              //         child: Text(
-              //           'No.3',
-              //           style: TypographyRoboto.boldHeading2,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
               const SizedBox(
                 height: 350,
                 child: TipsTriks(),
               )
-              // ListView.builder(
-              //   scrollDirection: Axis.horizontal,
-              //   shrinkWrap: true,
-              //   itemCount: image.length,
-              //   itemBuilder:
-              // (context, index) => Image.asset(
-              //     image.elementAt(index),
-              //     height: 350,
-              //   ),
-              // ),
             ],
           ),
         ),

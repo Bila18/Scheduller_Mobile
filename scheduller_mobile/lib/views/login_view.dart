@@ -46,7 +46,7 @@ class _LoginViewState extends State<LoginView> {
                   width: 250,
                 ),
                 Text(
-                  'Ada Kesalahan!',
+                  'Something Worng!',
                   style: TypographyRoboto.mediumHeading3,
                 ),
               ],
@@ -56,7 +56,7 @@ class _LoginViewState extends State<LoginView> {
               TextButton(
                 onPressed: () => Navigator.pop(context),
                 child: Text(
-                  "Okay",
+                  "Oke",
                   style: TypographyRoboto.skip,
                 ),
               ),
@@ -121,11 +121,11 @@ class _LoginViewState extends State<LoginView> {
                         // Validator untuk user input email agar user memasukan email yang valid dan email tidak boleh kosong
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return 'Email tidak boleh kosong';
+                            return 'Email cannot be empty';
                           } else if (!RegExp(
                                   r'^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')
                               .hasMatch(value)) {
-                            return 'Masukkan email yang valid';
+                            return 'Please input a valid email';
                           }
                           return null;
                         },
@@ -173,9 +173,9 @@ class _LoginViewState extends State<LoginView> {
                         // Validator untuk user input password agar minimal pw 6 karakter dan inputan tidak boleh kosong
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return 'Kata sandi tidak boleh kosong';
+                            return 'Password cannot be empty';
                           } else if (value.length < 6) {
-                            return 'Kata sandi harus 6 karakter';
+                            return 'Password must be 6 characters';
                           }
                           return null;
                         },
